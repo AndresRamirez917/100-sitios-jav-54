@@ -144,7 +144,11 @@ img {
             width: 200%;
             height: 49vh;
             padding: 10px;
+      
         }
+        h4, p, .btn {
+            z-index: 5000;
+             } 
 
     }
     .overlay-2 {

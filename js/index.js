@@ -1,4 +1,4 @@
-async function getData() {
+export async function getData() {
     const result = await fetch('https://fakestoreapi.com/products/');
     const products = await result.json();
     console.log(products);
@@ -9,7 +9,7 @@ async function getData() {
         const randomData = (min, max) => Math.floor(Math.random() * (min - max + 1) + max);
         const randInt = randomData(1, productsArr.length);
         const randIndex = randInt;
-        for(i = 0; i < productsArrSliced.length; i++){
+        for(let i = 0; i < productsArrSliced.length; i++){
             if(element.id == i){
                 const grid_box = document.createRange().createContextualFragment(`
                     
@@ -31,9 +31,12 @@ async function getData() {
                     `)
                     const camaras = document.getElementById('cameras');
                     camaras.append(grid_box)
+                    console.log(productsArr[randIndex][5][1])
+                }
+                //return console.log("madresita")
             }
-        }
-    });
+            return productsArr[randIndex][5][1]
+        });
 }
 
 getData()
