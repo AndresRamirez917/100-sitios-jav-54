@@ -10,6 +10,7 @@
 }
 //cameras
 #cameras {
+    
     .grid-box-1,
     .grid-box-2,
     .grid-box-3,
@@ -28,6 +29,15 @@
     }
     .grid-box-4 {
         grid-row: 4;
+    }
+
+    .overlay-1 {
+        img {
+            width: 200%;
+        }
+        p {
+            width: 40%;
+        }
     }
 
 }

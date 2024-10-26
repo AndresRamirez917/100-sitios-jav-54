@@ -25,6 +25,12 @@
 #cameras .grid-box-4 {
   grid-row: 4;
 }
+#cameras .overlay-1 img {
+  width: 200%;
+}
+#cameras .overlay-1 p {
+  width: 40%;
+}
 
 #contact .contact-row {
   display: block;
