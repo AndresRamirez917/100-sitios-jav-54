@@ -1,0 +1,60 @@
+//showcase-2
+#showcase-2 {
+    text-align: justify;
+}
+
+
+.grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+}
+//cameras
+#cameras {
+    .grid-box-1,
+    .grid-box-2,
+    .grid-box-3,
+    .grid-box-4 {
+        grid-column: 1;
+    }
+    
+    .grid-box-1 {
+        grid-row: 1;
+    }
+    .grid-box-2 {
+        grid-row: 2;
+    }
+    .grid-box-3 {
+        grid-row: 3;
+    }
+    .grid-box-4 {
+        grid-row: 4;
+    }
+
+}
+
+//contact
+#contact {
+  
+    .contact-row {
+        display: block;
+        width: 90%;
+        h2 {
+            text-align: center;
+        }
+                margin: 0 auto;
+            form {
+                display: block;
+                
+            }    
+            .contact-row-2 {      
+                text-align: center;              
+                margin: 0 auto;
+            }
+    }
+ 
+    }
+
+       
+    
+   
+
