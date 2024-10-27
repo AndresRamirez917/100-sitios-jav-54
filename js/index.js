@@ -1,4 +1,4 @@
-export async function getData() {
+ async function getData() {
     const result = await fetch('https://fakestoreapi.com/products/');
     const products = await result.json();
     const arr = ["project-1.html", "project-2.html", "project-3.html", "project-4.html"]
@@ -35,11 +35,52 @@ export async function getData() {
                         camaras.append(grid_box)
                     }
             }
-            }
-            
-            
-            return `<img src="/images/image-1.jpg"`
+            } 
+            //return `<img src="/images/image-1.jpg"`
         });
     }
 
-getData()
+   
+
+    const emailValido = (email) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)
+    }
+
+    const btn_validar = document.getElementById('btn-validar').onclick = (e) => {
+        e.preventDefault();
+        const nombre = document.getElementById('nombre');
+        const email = document.getElementById('email');
+        const mensaje = document.getElementById('mensaje');
+        const arr = [];
+        const messageArr = ["Nombre", "Email", "Mensaje"];
+        arr.push(nombre, email, mensaje);
+        for(i = 0; i < arr.length; i++){
+            if(arr[i].value == "") {
+                swal({
+                    title: `El campo ${messageArr[i]} no puede estar vacío`,
+                    icon: "error",
+                     })
+                     return false;
+            }
+        }
+    
+        if(!emailValido(email)){
+            swal({
+                title: `El campo ${messageArr[1]} no tiene el formato correcto`,
+                icon: "error",
+                 })
+                 return false;
+        }
+        swal({
+            title: `Datos enviados satisfactoriamente`,
+            icon: "success",
+             })
+             nombre.value = "";
+             email.value = "";
+             mensaje.value = "";
+        return true;
+    }
+    
+    getData()
+
+
