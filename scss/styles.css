@@ -141,11 +141,8 @@ img {
   z-index: 2;
   margin-top: -65%;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   padding: 10px;
-}
-#cameras .overlay-2 h4, #cameras .overlay-2 p, #cameras .overlay-2 .btn {
-  display: none;
 }
 #cameras .overlay-3 img {
   z-index: 2;

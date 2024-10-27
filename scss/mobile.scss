@@ -6,7 +6,7 @@
 
 .grid {
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: minmax(300px, auto);
+
 }
 //cameras
 #cameras {
@@ -16,19 +16,56 @@
     .grid-box-3,
     .grid-box-4 {
         grid-column: 1;
+       width: 350px;
     }
     
     .grid-box-1 {
         grid-row: 1;
+        img {
+            width: 100%;
+            height: 48vh;
+            background-position: center;
+            background-size: cover;
+        }
+        p {
+         
+            margin-top: -13rem;
+            overflow: hidden;
+            font-size: .7rem;
+            width: 100%;
+        }
     }
     .grid-box-2 {
+        height: 300px;
         grid-row: 2;
+        margin: 0;
+        padding: 0;
+        .overlay-2 {
+            img {
+                height: 48vh;
+            }
+            p {
+                margin-top: -15rem;
+            }
+            h4 {
+                margin-top: -3rem;
+            }
+        }
     }
     .grid-box-3 {
         grid-row: 3;
+        img {
+            height: 50vh;
+            margin-top: -5rem;
+        }
+        
     }
     .grid-box-4 {
         grid-row: 4;
+        img {
+            height: 50vh;
+            margin-top: -5rem;
+        }
     }
 
     .overlay-1 {
@@ -37,6 +74,22 @@
         }
         p {
             width: 40%;
+        }
+    }
+    .overlay {
+        p {
+            width: 80%;
+            font-weight: bold;
+            color: rgb(242, 105, 8);
+        }
+        .overlay-2 {
+            margin: 0;
+            padding: 0;
+           padding-bottom: 10rem;
+           margin-bottom: 10rem;
+           img {
+            margin-top: 10rem;
+           }
         }
     }
 
